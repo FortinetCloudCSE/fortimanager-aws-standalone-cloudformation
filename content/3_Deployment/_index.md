@@ -32,7 +32,7 @@ git clone https://github.com/FortinetCloudCSE/fortimanager-aws-standalone-cloudf
 {{< notice warning >}} 
 If the FMG is deployed into a public subnet, this hould have a default route to an Internet Gateway or bootstrapping the config and license of the FMG will fail.
 
-If the FMG is deployed into a private subnet, this subnet should have a S3 Gateway endpoint associated to the subnet's route table.  Otherwise, provide the relevant route table ID and the template will deploy a S3 gateway endpoint for you.  Reference [**AWS Documentation**](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) for further information.
+If the FMG is deployed into a private subnet, this subnet should have a S3 Gateway endpoint associated to the subnet's route table.  Otherwise, provide the relevant route table ID and the template will deploy a S3 gateway endpoint for you.  Reference [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) for further information.
 {{< /notice >}}
 
 ![](deploy4.png)

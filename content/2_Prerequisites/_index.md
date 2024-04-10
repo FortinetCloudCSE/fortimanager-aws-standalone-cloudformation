@@ -24,3 +24,9 @@ Before attempting to create a stack with the template, a few prerequisites shoul
 6.  If the FMG will be publicly available, **ensure that the PublicSubnet's AWS route table has a default route to an AWS Internet Gateway, otherwise bootstrapping will fail.**  Reference [**AWS Documentation**](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#route-tables-internet-gateway) for further information. 
 
 7.  If the FMG will not be publicly available, **ensure that a S3 gateway endpoint is deployed and assigned to the subnet's AWS route table the FMG will be deployed into**. Otherwise, provide the relevant route table ID and the template will deploy a S3 gateway endpoint for you.  Reference [**AWS Documentation**](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) for further information.
+
+{{< notice warning >}} 
+PAYG licensed instances require direct internet access to register with FortiCare successfully.
+
+BYOL and Flex can use proxies instead of direct internet access, however that requires modification to the userdata to bootstrap the proxy configuration correctly.
+{{< /notice >}}
